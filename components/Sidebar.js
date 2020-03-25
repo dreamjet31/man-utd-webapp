@@ -13,7 +13,7 @@ const Sidebar = () => {
         <div tw="mt-6">
           <MUFCLogo />
         </div>
-        <div>
+        <div tw="mb-24">
           <div> Home </div>
           <div> About </div>
           <div> Players </div>
