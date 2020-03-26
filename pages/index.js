@@ -16,13 +16,48 @@ const Index = () => {
       <div tw="flex flex-col sm:flex-row h-screen">
         <Navbar> Sidebar </Navbar>
         <div tw="overflow-auto h-screen w-full">
-          <div tw="bg-green-500 p-5 h-screen ">
-            <div tw="text-6xl mt-3 text-center text-gray-100 font-bold">
+          <div
+            css={[
+              tw`bg-gray-500 p-1 h-screen`,
+              css`
+                background: linear-gradient(#742a2a, #1a202c);
+              `
+            ]}
+          >
+            <div tw="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-center text-gray-100 font-bold">
               MANCHESTER UNITED
             </div>
           </div>
-          <div tw="bg-yellow-500 p-5 h-screen "> LMAO </div>
-          <div tw="bg-red-500 p-5 h-screen "> LMAO </div>
+          <div
+            css={[
+              tw`bg-gray-500 p-1 h-screen`,
+              css`
+                background: linear-gradient(#1a202c, #cbd5e0);
+              `
+            ]}
+          >
+            CONTENTOF PAGE 2
+          </div>
+          <div
+            css={[
+              tw`bg-gray-500 p-1 h-screen`,
+              css`
+                background: linear-gradient(#cbd5e0, #ecc94b);
+              `
+            ]}
+          >
+            CONTENTOF PAGE 3
+          </div>
+          <div
+            css={[
+              tw`bg-gray-500 p-1 h-screen`,
+              css`
+                background: linear-gradient(#ecc94b, #48bb78);
+              `
+            ]}
+          >
+            CONTENTOF PAGE 3
+          </div>
         </div>
       </div>
     </div>
