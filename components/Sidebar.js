@@ -21,8 +21,8 @@ const Sidebar = () => {
           <div> News </div>
         </div>
         <div tw="px-6 mb-6 text-xs text-gray-400 text-justify">
-          All copyrights belong to Manchester United Football Club and the
-          respective players.
+          All image copyrights belong to Manchester United Football Club and the
+          respective players. Website developed by Akshaj Verma.
         </div>
       </section>
     </SidebarComponent>
