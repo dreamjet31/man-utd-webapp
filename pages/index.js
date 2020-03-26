@@ -19,16 +19,12 @@ const MainpageComponent = styled.div(
 
 const Index = () => {
   return (
-    <div tw="flex min-h-screen mx-auto font-sans">
-      <Head>
-        <title>Manchester United</title>
-      </Head>
-      <Sidebar />
-      <MainpageComponent>
-        <div tw="text-6xl mt-3 text-center text-gray-100 font-bold">
-          MANCHESTER UNITED
-        </div>
-      </MainpageComponent>
+    <div tw="mx-auto">
+      <div tw="flex min-h-screen">
+        <Head>
+          <title>Manchester United</title>
+        </Head>
+      </div>
     </div>
   )
 }

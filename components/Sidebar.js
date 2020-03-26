@@ -3,28 +3,28 @@ import styled from "@emotion/styled/macro"
 import MUFCLogo from "../public/MUFCLogo"
 
 const SidebarComponent = styled.div(
-  tw`min-h-screen w-1/6 bg-gray-900 text-2xl text-gray-400`
+  tw`flex-none flex-col min-h-screen w-1/6 items-center justify-between bg-gray-500`
 )
+
+// tw="flex-none flex-col min-h-screen items-center justify-between"
 
 const Sidebar = () => {
   return (
     <SidebarComponent>
-      <section tw="flex flex-col min-h-screen justify-center items-center justify-between">
-        <div tw="mt-6">
-          <MUFCLogo />
-        </div>
-        <div tw="mb-24">
-          <div> Home </div>
-          <div> About </div>
-          <div> Players </div>
-          <div> Trophies </div>
-          <div> News </div>
-        </div>
-        <div tw="px-6 mb-6 text-xs text-gray-400 text-justify">
-          All image copyrights belong to Manchester United Football Club and the
-          respective players. Website developed by Akshaj Verma.
-        </div>
-      </section>
+      <div tw="bg-green-500">
+        <MUFCLogo />
+      </div>
+      <div tw="bg-yellow-500">
+        <div> Home </div>
+        <div> About </div>
+        <div> Players </div>
+        <div> Trophies </div>
+        <div> News </div>
+      </div>
+      <div tw="bg-red-500">
+        All image copyrights belong to Manchester United Football Club and the
+        respective players. Website developed by Akshaj Verma.
+      </div>
     </SidebarComponent>
   )
 }
