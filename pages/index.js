@@ -4,6 +4,8 @@ import styled from "@emotion/styled/macro"
 import { css } from "@emotion/core"
 import Head from "next/head"
 
+import Navbar from "../components/Navbar"
+
 const Index = () => {
   return (
     <div tw="mx-auto">
@@ -11,15 +13,16 @@ const Index = () => {
         <title>Manchester United</title>
       </Head>
 
-      <div tw="flex flex-col sm:flex-row">
-        <div tw="flex-1 sm:flex-none sm:w-1/5 sm:min-h-screen bg-gray-900 text-gray-100 p-4">
-          This is the Navbar
-        </div>
-        <div tw="flex-1 min-h-screen sm:w-4/5 bg-green-100 text-gray-900 p-4">
-          <p tw="mb-3">
-            LMAO What LMAO WhatLMAO What LMAO WhatLMAO What LMAO WhatLMAO What
-            LMAO WhatLMAO What LMAO What
-          </p>
+      <div tw="flex flex-col sm:flex-row h-screen">
+        <Navbar> Sidebar </Navbar>
+        <div tw="overflow-auto h-screen w-full">
+          <div tw="bg-green-500 p-5 h-screen ">
+            <div tw="text-6xl mt-3 text-center text-gray-100 font-bold">
+              MANCHESTER UNITED
+            </div>
+          </div>
+          <div tw="bg-yellow-500 p-5 h-screen "> LMAO </div>
+          <div tw="bg-red-500 p-5 h-screen "> LMAO </div>
         </div>
       </div>
     </div>
