@@ -4,31 +4,62 @@ import styled from "@emotion/styled/macro"
 import { css } from "@emotion/core"
 import Head from "next/head"
 
-import Sidebar from "../components/Sidebar"
-import RedDevilsLogo from "../public/RedDevilsLogo"
-
-const MainpageComponent = styled.div(
-  tw`min-h-screen w-5/6 bg-gray-100 text-gray-900`,
-  css`
-    background: linear-gradient(#9b2c2c, #1a202c);
-    * {
-      ${tw`mt-6`}
-    }
-  `
-)
+import Navbar from "../components/Navbar"
 
 const Index = () => {
   return (
-    <div tw="flex min-h-screen mx-auto font-sans">
+    <div tw="mx-auto">
       <Head>
         <title>Manchester United</title>
       </Head>
-      <Sidebar />
-      <MainpageComponent>
-        <div tw="text-6xl mt-3 text-center text-gray-100 font-bold">
-          MANCHESTER UNITED
+
+      <div tw="flex flex-col sm:flex-row h-screen">
+        <Navbar> Sidebar </Navbar>
+        <div tw="overflow-auto h-screen w-full">
+          <div
+            css={[
+              tw`bg-gray-500 p-1 h-screen`,
+              css`
+                background: linear-gradient(#742a2a, #1a202c);
+              `
+            ]}
+          >
+            <div tw="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-center text-gray-100 font-bold">
+              MANCHESTER UNITED
+            </div>
+          </div>
+          <div
+            css={[
+              tw`bg-gray-500 p-1 h-screen`,
+              css`
+                background: linear-gradient(#1a202c, #cbd5e0);
+              `
+            ]}
+          >
+            CONTENTOF PAGE 2
+          </div>
+          <div
+            css={[
+              tw`bg-gray-500 p-1 h-screen`,
+              css`
+                background: linear-gradient(#cbd5e0, #ecc94b);
+              `
+            ]}
+          >
+            CONTENTOF PAGE 3
+          </div>
+          <div
+            css={[
+              tw`bg-gray-500 p-1 h-screen`,
+              css`
+                background: linear-gradient(#ecc94b, #48bb78);
+              `
+            ]}
+          >
+            CONTENTOF PAGE 3
+          </div>
         </div>
-      </MainpageComponent>
+      </div>
     </div>
   )
 }
