@@ -26,7 +26,20 @@ const Index = () => {
           </MainPage>
 
           <MainPage colour1="#1a202c" colour2="#cbd5e0">
-            PAGE 2
+            <div tw="flex flex-col h-full justify-center sm:flex-row sm:flex-wrap sm:overflow-auto sm:justify-around sm:items-center">
+              <div tw="h-24 m-2 sm:h-48 sm:m-2 sm:w-64 md:h-56 md:w-72 lg:h-64 lg:w-96 bg-gray-200 rounded shadow-lg">
+                lmao
+              </div>
+              <div tw="h-24 m-2 sm:h-48 sm:m-2 sm:w-64 md:h-56 md:w-72 lg:h-64 lg:w-96 bg-gray-200 rounded shadow-lg">
+                lmao
+              </div>
+              <div tw="h-24 m-2 sm:h-48 sm:m-2 sm:w-64 md:h-56 md:w-72 lg:h-64 lg:w-96 bg-gray-200 rounded shadow-lg">
+                lmao
+              </div>
+              <div tw="h-24 m-2 sm:h-48 sm:m-2 sm:w-64 md:h-56 md:w-72 lg:h-64 lg:w-96 bg-gray-200 rounded shadow-lg">
+                lmao
+              </div>
+            </div>
           </MainPage>
 
           <MainPage colour1="#cbd5e0" colour2="#ecc94b">
