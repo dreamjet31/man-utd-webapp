@@ -5,6 +5,7 @@ import { css } from "@emotion/core"
 import Head from "next/head"
 
 import Navbar from "../components/Navbar"
+import MainPage from "../components/MainPage"
 
 const Index = () => {
   return (
@@ -16,48 +17,23 @@ const Index = () => {
       <div tw="flex flex-col sm:flex-row h-screen">
         <Navbar> Sidebar </Navbar>
         <div tw="overflow-auto h-screen w-full">
-          <div
-            css={[
-              tw`bg-gray-500 p-1 h-screen`,
-              css`
-                background: linear-gradient(#742a2a, #1a202c);
-              `
-            ]}
-          >
+          <MainPage colour1="#742a2a" colour2="#1a202c">
             <div tw="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-center text-gray-100 font-bold">
               MANCHESTER UNITED
             </div>
-          </div>
-          <div
-            css={[
-              tw`bg-gray-500 p-1 h-screen`,
-              css`
-                background: linear-gradient(#1a202c, #cbd5e0);
-              `
-            ]}
-          >
-            CONTENTOF PAGE 2
-          </div>
-          <div
-            css={[
-              tw`bg-gray-500 p-1 h-screen`,
-              css`
-                background: linear-gradient(#cbd5e0, #ecc94b);
-              `
-            ]}
-          >
-            CONTENTOF PAGE 3
-          </div>
-          <div
-            css={[
-              tw`bg-gray-500 p-1 h-screen`,
-              css`
-                background: linear-gradient(#ecc94b, #48bb78);
-              `
-            ]}
-          >
-            CONTENTOF PAGE 3
-          </div>
+          </MainPage>
+
+          <MainPage colour1="#1a202c" colour2="#cbd5e0">
+            PAGE 2
+          </MainPage>
+
+          <MainPage colour1="#cbd5e0" colour2="#ecc94b">
+            PAGE 3
+          </MainPage>
+
+          <MainPage colour1="#ecc94b" colour2="#48bb78">
+            PAGE 4
+          </MainPage>
         </div>
       </div>
     </div>
