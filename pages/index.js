@@ -15,7 +15,7 @@ const Index = () => {
 
       <div tw="flex flex-col sm:flex-row h-screen">
         <Navbar> Sidebar </Navbar>
-        <div tw="overflow-auto h-screen w-5/6">
+        <div tw="overflow-auto h-screen w-full">
           <div
             css={[
               tw`bg-gray-500 p-1 h-screen`,
