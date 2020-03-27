@@ -6,6 +6,7 @@ import Head from "next/head"
 
 import Navbar from "../components/Navbar"
 import MainPage from "../components/MainPage"
+import RedDevilsImage from "../components/images/RedDevilsImage"
 
 const Index = () => {
   return (
@@ -21,6 +22,7 @@ const Index = () => {
             <div tw="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-center text-gray-100 font-bold">
               MANCHESTER UNITED
             </div>
+            <RedDevilsImage />
           </MainPage>
 
           <MainPage colour1="#1a202c" colour2="#cbd5e0">
