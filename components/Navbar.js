@@ -1,7 +1,6 @@
 import tw from "twin.macro"
-import styled from "@emotion/styled/macro"
 
-import MUFCLogo from "../public/MUFCLogo"
+import MUFCLogo from "./MUFCLogo"
 
 const Navbar = () => {
   return (
