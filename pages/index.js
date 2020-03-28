@@ -8,6 +8,22 @@ import Navbar from "../components/Navbar"
 import MainPage from "../components/MainPage"
 import RedDevilsImage from "../components/images/RedDevilsImage"
 
+const CardsVertical = props => {
+  return (
+    <div tw="flex flex-1 flex-col justify-between">
+      <div tw="flex-shrink-0 mx-2 my-auto p-2 h-32 w-64 md:h-40 md:w-84 lg:h-48 w-96 rounded bg-gray-200">
+        lmao
+      </div>
+      <div tw="flex-shrink-0 mx-2 my-auto p-2 h-32 w-64 md:h-40 md:w-84 lg:h-48 w-96 rounded bg-gray-200">
+        lmao
+      </div>
+      <div tw="flex-shrink-0 mx-2 my-auto p-2 h-32 w-64 md:h-40 md:w-84 lg:h-48 w-96 rounded bg-gray-200">
+        lmao
+      </div>
+    </div>
+  )
+}
+
 const Index = () => {
   return (
     <div tw="mx-auto">
@@ -19,14 +35,14 @@ const Index = () => {
         <Navbar> Sidebar </Navbar>
         <div tw="overflow-auto h-screen w-full">
           <MainPage colour1="#742a2a" colour2="#1a202c">
-            <div tw="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-center text-gray-100 font-bold">
+            <div tw="p-1 text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-center text-gray-100 font-bold">
               MANCHESTER UNITED
             </div>
             <RedDevilsImage />
           </MainPage>
 
-          <MainPage colour1="#1a202c" colour2="#cbd5e0">
-            <div tw="flex flex-col h-full justify-center sm:flex-row sm:flex-wrap sm:overflow-auto sm:justify-around sm:items-center">
+          <MainPage colour1="#1a202c" colour2="#e2e8f0">
+            <div tw="flex flex-col h-full m-auto overflow-auto sm:flex-row sm:flex-wrap sm:overflow-auto sm:justify-around sm:items-center">
               <div tw="h-24 m-2 sm:h-48 sm:m-2 sm:w-64 md:h-56 md:w-72 lg:h-64 lg:w-96 bg-gray-200 rounded shadow-lg">
                 lmao
               </div>
@@ -42,12 +58,37 @@ const Index = () => {
             </div>
           </MainPage>
 
-          <MainPage colour1="#cbd5e0" colour2="#ecc94b">
-            PAGE 3
+          <MainPage colour1="#e2e8f0" colour2="#742a2a">
+            <div tw="flex flex-row p-1 min-h-full scrolling-touch overflow-auto">
+              <CardsVertical />
+              <CardsVertical />
+              <CardsVertical />
+              <CardsVertical />
+              <CardsVertical />
+            </div>
           </MainPage>
 
-          <MainPage colour1="#ecc94b" colour2="#48bb78">
-            PAGE 4
+          <MainPage colour1="#742a2a" colour2="#1a202c">
+            <div tw="flex flex-col h-full m-auto overflow-auto sm:flex-row sm:flex-wrap sm:overflow-auto sm:justify-around sm:items-center">
+              <div tw="h-24 m-2 sm:h-48 sm:m-2 sm:w-64 md:h-56 md:w-72 lg:h-64 lg:w-96 bg-gray-200 rounded shadow-lg">
+                lmao
+              </div>
+              <div tw="h-24 m-2 sm:h-48 sm:m-2 sm:w-64 md:h-56 md:w-72 lg:h-64 lg:w-96 bg-gray-200 rounded shadow-lg">
+                lmao
+              </div>
+              <div tw="h-24 m-2 sm:h-48 sm:m-2 sm:w-64 md:h-56 md:w-72 lg:h-64 lg:w-96 bg-gray-200 rounded shadow-lg">
+                lmao
+              </div>
+              <div tw="h-24 m-2 sm:h-48 sm:m-2 sm:w-64 md:h-56 md:w-72 lg:h-64 lg:w-96 bg-gray-200 rounded shadow-lg">
+                lmao
+              </div>
+              <div tw="h-24 m-2 sm:h-48 sm:m-2 sm:w-64 md:h-56 md:w-72 lg:h-64 lg:w-96 bg-gray-200 rounded shadow-lg">
+                lmao
+              </div>
+              <div tw="h-24 m-2 sm:h-48 sm:m-2 sm:w-64 md:h-56 md:w-72 lg:h-64 lg:w-96 bg-gray-200 rounded shadow-lg">
+                lmao
+              </div>
+            </div>
           </MainPage>
         </div>
       </div>
