@@ -6,7 +6,6 @@ import Head from "next/head"
 
 import Navbar from "../components/Navbar"
 import MainPage from "../components/MainPage"
-import RedDevilsImage from "../components/images/RedDevilsImage"
 
 const CardsVertical = props => {
   return (
@@ -38,7 +37,12 @@ const Index = () => {
             <div tw="p-1 text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-center text-gray-100 font-bold">
               MANCHESTER UNITED
             </div>
-            <RedDevilsImage />
+            <div tw="mx-auto mt-20 sm:mt-24 md:mt-32 lg:mt-48">
+              <img
+                tw="object-contain w-full h-48 sm:h-56 md:h-64"
+                src={require("../public/images/red_devils_image.png")}
+              />
+            </div>
           </MainPage>
 
           <MainPage colour1="#1a202c" colour2="#e2e8f0">
