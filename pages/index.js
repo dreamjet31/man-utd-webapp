@@ -34,7 +34,7 @@ const Index = () => {
           </MainPage>
 
           {/* ABOUT  */}
-          <MainPage colour1="#1a202c" colour2="#e2e8f0">
+          <MainPage colour1="#1a202c" colour2="#2a4365">
             <div tw="flex flex-1 flex-col h-full m-2 p-1 overflow-auto sm:flex-row sm:flex-wrap sm:overflow-auto sm:justify-around sm:items-center">
               <AboutCard title="$3.8B" subtitle="Net Worth (May 2019)" />
               <AboutCard title="1878" subtitle="Est." />
@@ -44,7 +44,7 @@ const Index = () => {
           </MainPage>
 
           {/* TROPHIES */}
-          <MainPage colour1="#e2e8f0" colour2="#742a2a">
+          <MainPage colour1="#2a4365" colour2="#742a2a">
             <div tw="flex flex-1 flex-col h-screen m-2 p-1 overflow-auto sm:flex-row sm:flex-wrap sm:overflow-auto sm:justify-around sm:items-center">
               <TrophiesCard
                 trophyImage="premier_league"
