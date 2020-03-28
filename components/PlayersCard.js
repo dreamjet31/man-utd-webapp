@@ -8,7 +8,7 @@ const CardsVertical = props => {
 
   return (
     <div tw="flex flex-1 flex-col justify-between">
-      <div tw="flex-1 m-1 p-1 h-48 w-32 sm:h-56 sm:w-40 md:h-64 md:w-48 lg:h-72 lg:w-56 rounded bg-gray-200">
+      <div tw="flex-1 overflow-auto m-1 p-1 h-48 w-32 sm:h-56 sm:w-40 md:h-64 md:w-48 lg:h-72 lg:w-56 rounded bg-gray-200">
         <div tw="bg-gray-200 h-32 sm:h-40 md:h-48 lg:h-64 ">
           <img
             tw="object-contain object-top w-full overflow-hidden h-40 sm:h-48 md:h-56 lg:h-64"
@@ -19,7 +19,7 @@ const CardsVertical = props => {
           </p>
         </div>
       </div>
-      <div tw="flex-1 m-1 p-1 h-48 w-32 sm:h-56 sm:w-40 md:h-64 md:w-48 lg:h-72 lg:w-56 rounded bg-gray-200">
+      <div tw="flex-1 overflow-auto m-1 p-1 h-48 w-32 sm:h-56 sm:w-40 md:h-64 md:w-48 lg:h-72 lg:w-56 rounded bg-gray-200">
         <div tw="bg-gray-200 h-32 sm:h-40 md:h-48 lg:h-64 ">
           <img
             tw="object-contain object-top w-full overflow-hidden h-48 sm:h-48 md:h-56 lg:h-64"
