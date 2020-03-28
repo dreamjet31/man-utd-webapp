@@ -14,9 +14,9 @@ const TrophiesCard = props => {
           src={require(`../public/images/trophies/${trophyImage}.jpg`)}
         />
       </div>
-      <div tw="bg-gray-900 text-gray-200 rounded p-1">
+      <div tw="bg-gray-900 text-center text-gray-200 rounded p-1">
         <p>
-          {trophyCount} {trophyName}
+          {trophyName} - <span tw="font-bold text-lg">{trophyCount}</span>
         </p>
       </div>
     </div>

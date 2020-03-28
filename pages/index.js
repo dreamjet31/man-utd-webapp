@@ -6,28 +6,9 @@ import Head from "next/head"
 
 import Navbar from "../components/Navbar"
 import MainPage from "../components/MainPage"
+import AboutCard from "../components/AboutCard"
 import PlayersCard from "../components/PlayersCard"
 import TrophiesCard from "../components/TrophiesCard"
-
-const AboutCard = props => {
-  const title = props.title
-  const subtitle = props.subtitle
-
-  return (
-    <div tw="flex flex-row-reverse items-center justify-between h-24 m-2 p-1 sm:flex-col sm:items-center sm:justify-center sm:h-48 sm:m-2 sm:w-64 md:h-56 md:w-72 lg:h-64 lg:w-96 bg-gray-200 rounded shadow-lg">
-      <div tw="w-2/3 text-center m-1 p-1">
-        <p>
-          <span tw="font-bold text-gray-900 text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
-            {title}
-          </span>
-        </p>
-      </div>
-      <div tw="w-1/3 m-1 text-center self-center">
-        <h3 tw="text-base font-semibold text-gray-700">{subtitle}</h3>
-      </div>
-    </div>
-  )
-}
 
 const Index = () => {
   return (
@@ -57,7 +38,7 @@ const Index = () => {
             <div tw="flex flex-1 flex-col h-full m-2 p-1 overflow-auto sm:flex-row sm:flex-wrap sm:overflow-auto sm:justify-around sm:items-center">
               <AboutCard title="$3.8B" subtitle="Net Worth (May 2019)" />
               <AboutCard title="1878" subtitle="Est." />
-              <AboutCard title="Newton Heath FC" subtitle="Founding Name" />
+              <AboutCard title="Newton Heath" subtitle="Founding Name" />
               <AboutCard title="Old Trafford" subtitle="Home Stadium" />
             </div>
           </MainPage>
