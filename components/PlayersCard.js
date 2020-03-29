@@ -11,7 +11,7 @@ const PlayersCard = props => {
       <div tw="bg-white p-1 rounded m-auto h-48 w-full sm:h-56 md:h-64 lg:h-72">
         <div>
           <img
-            tw="h-40 sm:h-48 md:h-56 lg:h-64 rounded object-cover"
+            tw="h-40 sm:h-48 md:h-56 lg:h-64 mx-auto rounded object-cover"
             src={require(`../public/images/players/${player1Img}.png`)}
           />
         </div>
@@ -22,7 +22,7 @@ const PlayersCard = props => {
       <div tw="bg-white p-1 rounded m-auto h-48 w-full sm:h-56 md:h-64 lg:h-72">
         <div>
           <img
-            tw="h-40 sm:h-48 md:h-56 lg:h-64 rounded object-cover"
+            tw="h-40 sm:h-48 md:h-56 lg:h-64 mx-auto rounded object-cover"
             src={require(`../public/images/players/${player2Img}.png`)}
           />
         </div>
