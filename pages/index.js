@@ -11,7 +11,37 @@ import AboutCard from "../components/AboutCard"
 import PlayersCard from "../components/PlayersCard"
 import TrophiesCard from "../components/TrophiesCard"
 
+const NewsCard = props => {
+  const { urlToImage, author, title, description, url, publishedAt } = props
+
+  console.log(props.articles)
+
+  return (
+    <div tw="w-full md:w-1/2 lg:w-1/3 px-2 my-2">
+      <div tw="shadow-md rounded bg-white">
+        <img tw="h-48 w-full rounded object-cover" src={urlToImage} alt="" />
+        <div tw="flex flex-col p-4">
+          <p tw="text-lg">{title}</p>
+          <p tw="text-gray-600">
+            By {author} on {publishedAt}
+          </p>
+          <p tw="text-gray-800">{description}</p>
+          <a href={url}>
+            <button tw="self-end bg-color-blue-500 p-2 rounded mt-4">
+              Read More
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+  )
+}
+
 const Index = props => {
+  const ArticlesWithAuthors = props.articles.filter(
+    article => article.author != null
+  )
+
   return (
     <div
       css={[
@@ -130,52 +160,20 @@ const Index = props => {
               />
             </div>
           </MainPage>
+
+          {/* NEWS */}
           <MainPage id="news" colour1="#1a202c" colour2="#2a4365">
             <div tw="flex flex-wrap mt-2 mx-2 overflow-auto">
-              <div tw="w-full md:w-1/2 lg:w-1/3 px-2 my-2">
-                <div tw="shadow-md bg-white">
-                  <img
-                    tw="h-48 w-full object-cover"
-                    src="https://your-image-url.jpg"
-                    alt=""
-                  />
-                  <div tw="flex flex-col p-4">
-                    <p tw="text-lg">Your title here...</p>
-                    <p tw="text-gray-600">Your description here...</p>
-                    <button tw="self-end mt-4">Show more...</button>
-                  </div>
-                </div>
-              </div>
-
-              <div tw="w-full md:w-1/2 lg:w-1/3 px-2 my-2">
-                <div tw="shadow-md bg-white">
-                  <img
-                    tw="h-48 w-full object-cover"
-                    src="https://your-image-url.jpg"
-                    alt=""
-                  />
-                  <div tw="flex flex-col p-4">
-                    <p tw="text-lg">Your title here...</p>
-                    <p tw="text-gray-600">Your description here...</p>
-                    <button tw="self-end mt-4">Show more...</button>
-                  </div>
-                </div>
-              </div>
-
-              <div tw="w-full md:w-1/2 lg:w-1/3 px-2 my-2">
-                <div tw="shadow-md bg-white">
-                  <img
-                    tw="h-48 w-full object-cover"
-                    src="https://your-image-url.jpg"
-                    alt=""
-                  />
-                  <div tw="flex flex-col p-4">
-                    <p tw="text-lg">Your title here...</p>
-                    <p tw="text-gray-600">Your description here...</p>
-                    <button tw="self-end mt-4">Show more...</button>
-                  </div>
-                </div>
-              </div>
+              {ArticlesWithAuthors.map(article => (
+                <NewsCard
+                  urlToImage={article.urlToImage}
+                  author={article.author}
+                  title={article.title}
+                  description={article.description}
+                  url={article.url}
+                  publishedAt={article.publishedAt}
+                ></NewsCard>
+              ))}
             </div>
           </MainPage>
         </div>
@@ -184,21 +182,21 @@ const Index = props => {
   )
 }
 
-// Index.getInitialProps = async function() {
-//   const res = await fetch(
-//     "http://newsapi.org/v2/everything?" +
-//       "q=Manchester United&" +
-//       "from=2020-03-29&" +
-//       "sortBy=popularity&" +
-//       "apiKey=d690a03ad7524a55a42c9c404e2afb46"
-//   )
-//   const data = await res.json()
+Index.getInitialProps = async function() {
+  const res = await fetch(
+    "http://newsapi.org/v2/everything?" +
+      "q=Manchester United&" +
+      "from=2020-03-29&" +
+      "sortBy=popularity&" +
+      "apiKey=d690a03ad7524a55a42c9c404e2afb46"
+  )
+  const data = await res.json()
 
-//   console.log(`Show data fetched. Count: ${data.length}`)
-//   console.log(res)
+  console.log(`Show data fetched. Count: ${data.length}`)
+  console.log(res)
 
-//   return data
-// }
+  return data
+}
 
 export default Index
 
