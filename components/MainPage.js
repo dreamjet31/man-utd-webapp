@@ -8,7 +8,7 @@ const MainPage = props => {
   return (
     <div
       css={[
-        tw`bg-gray-500 p-1 h-screen`,
+        tw`bg-gray-500 p-1 h-screen overflow-auto`,
         css`
           background: linear-gradient(${colour1}, ${colour2});
         `

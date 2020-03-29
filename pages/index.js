@@ -3,6 +3,7 @@ import tw from "twin.macro"
 import styled from "@emotion/styled/macro"
 import { css } from "@emotion/core"
 import Head from "next/head"
+import fetch from "isomorphic-unfetch"
 
 import Navbar from "../components/Navbar"
 import MainPage from "../components/MainPage"
@@ -10,7 +11,7 @@ import AboutCard from "../components/AboutCard"
 import PlayersCard from "../components/PlayersCard"
 import TrophiesCard from "../components/TrophiesCard"
 
-const Index = () => {
+const Index = props => {
   return (
     <div
       css={[
@@ -129,10 +130,90 @@ const Index = () => {
               />
             </div>
           </MainPage>
+          <MainPage id="news" colour1="#1a202c" colour2="#2a4365">
+            <div tw="flex flex-wrap mt-2 mx-2 overflow-auto">
+              <div tw="w-full md:w-1/2 lg:w-1/3 px-2 my-2">
+                <div tw="shadow-md bg-white">
+                  <img
+                    tw="h-48 w-full object-cover"
+                    src="https://your-image-url.jpg"
+                    alt=""
+                  />
+                  <div tw="flex flex-col p-4">
+                    <p tw="text-lg">Your title here...</p>
+                    <p tw="text-gray-600">Your description here...</p>
+                    <button tw="self-end mt-4">Show more...</button>
+                  </div>
+                </div>
+              </div>
+
+              <div tw="w-full md:w-1/2 lg:w-1/3 px-2 my-2">
+                <div tw="shadow-md bg-white">
+                  <img
+                    tw="h-48 w-full object-cover"
+                    src="https://your-image-url.jpg"
+                    alt=""
+                  />
+                  <div tw="flex flex-col p-4">
+                    <p tw="text-lg">Your title here...</p>
+                    <p tw="text-gray-600">Your description here...</p>
+                    <button tw="self-end mt-4">Show more...</button>
+                  </div>
+                </div>
+              </div>
+
+              <div tw="w-full md:w-1/2 lg:w-1/3 px-2 my-2">
+                <div tw="shadow-md bg-white">
+                  <img
+                    tw="h-48 w-full object-cover"
+                    src="https://your-image-url.jpg"
+                    alt=""
+                  />
+                  <div tw="flex flex-col p-4">
+                    <p tw="text-lg">Your title here...</p>
+                    <p tw="text-gray-600">Your description here...</p>
+                    <button tw="self-end mt-4">Show more...</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </MainPage>
         </div>
       </div>
     </div>
   )
 }
 
+// Index.getInitialProps = async function() {
+//   const res = await fetch(
+//     "http://newsapi.org/v2/everything?" +
+//       "q=Manchester United&" +
+//       "from=2020-03-29&" +
+//       "sortBy=popularity&" +
+//       "apiKey=d690a03ad7524a55a42c9c404e2afb46"
+//   )
+//   const data = await res.json()
+
+//   console.log(`Show data fetched. Count: ${data.length}`)
+//   console.log(res)
+
+//   return data
+// }
+
 export default Index
+
+{
+  /* <div tw="flex flex-row flex-1 h-screen overflow-auto m-2 p-1">
+<div tw="flex flex-col bg-gray-200 h-40 w-1/2">
+  <div>
+    <img
+      tw="bg-yellow-500 m-1 h-40 object-contain"
+      src="https://ichef.bbci.co.uk/live-experience/cps/624/cpsprodpb/FA23/production/_111453046_p087xd30.jpg"
+    />
+  </div>
+  <div>
+    <p tw="bg-green-500 m-1">This is the news.</p>
+  </div>
+</div>
+</div> */
+}
