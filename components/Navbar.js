@@ -21,6 +21,9 @@ const Navbar = () => {
         <a tw="px-2 py-1" href="#players">
           Players
         </a>
+        <a tw="px-2 py-1" href="#news">
+          News
+        </a>
       </div>
     </div>
   )
