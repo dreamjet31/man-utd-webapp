@@ -12,7 +12,14 @@ import TrophiesCard from "../components/TrophiesCard"
 
 const Index = () => {
   return (
-    <div tw="mx-auto">
+    <div
+      css={[
+        tw`mx-auto`,
+        css`
+          scroll-behavior: smooth;
+        `
+      ]}
+    >
       <Head>
         <title>Manchester United</title>
       </Head>
@@ -23,7 +30,10 @@ const Index = () => {
         <div tw="overflow-auto h-screen w-full">
           <MainPage colour1="#742a2a" colour2="#1a202c">
             <div tw="flex flex-col overflow-auto justify-around items-center content-around">
-              <div tw="p-2 text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-center text-gray-100 font-bold">
+              <div
+                id="home"
+                tw="p-2 text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-center text-gray-100 font-bold"
+              >
                 MANCHESTER UNITED
               </div>
               <div tw="mx-auto mt-10 mx-10 p-4 shadow-lg rounded sm:mt-20 md:mt-24 lg:mt-32">
@@ -36,7 +46,7 @@ const Index = () => {
           </MainPage>
 
           {/* ABOUT  */}
-          <MainPage colour1="#1a202c" colour2="#2a4365">
+          <MainPage id="about" colour1="#1a202c" colour2="#2a4365">
             <div tw="flex flex-1 flex-col h-full m-2 p-1 overflow-auto sm:flex-row sm:flex-wrap sm:overflow-auto sm:justify-around sm:items-center">
               <AboutCard title="$3.8B" subtitle="Net Worth (May 2019)" />
               <AboutCard title="1878" subtitle="Est." />
@@ -46,7 +56,7 @@ const Index = () => {
           </MainPage>
 
           {/* TROPHIES */}
-          <MainPage colour1="#2a4365" colour2="#742a2a">
+          <MainPage id="trophies" colour1="#2a4365" colour2="#742a2a">
             <div tw="flex flex-1 flex-col h-screen m-2 p-1 overflow-auto sm:flex-row sm:flex-wrap sm:overflow-auto sm:justify-around sm:items-center">
               <TrophiesCard
                 trophyImage="premier_league"
@@ -82,7 +92,7 @@ const Index = () => {
           </MainPage>
 
           {/* PLAYERS */}
-          <MainPage colour1="#742a2a" colour2="#1a202c">
+          <MainPage id="players" colour1="#742a2a" colour2="#1a202c">
             <div tw="flex flex-1 m-2 p-1 flex-row min-h-full overflow-auto">
               <PlayersCard
                 player1Img="de_gea"
