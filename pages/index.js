@@ -6,38 +6,11 @@ import Head from "next/head"
 import fetch from "isomorphic-unfetch"
 
 import Navbar from "../components/Navbar"
+import NewsCard from "../components/NewsCard"
 import MainPage from "../components/MainPage"
 import AboutCard from "../components/AboutCard"
 import PlayersCard from "../components/PlayersCard"
 import TrophiesCard from "../components/TrophiesCard"
-
-const NewsCard = props => {
-  const { urlToImage, author, title, description, url, publishedAt } = props
-
-  return (
-    <div tw="w-full md:w-1/2 lg:w-1/3 px-2 my-2">
-      <div tw="shadow-md rounded bg-white">
-        <img
-          tw="h-48 w-full rounded object-cover"
-          src={urlToImage}
-          alt={title}
-        />
-        <div tw="flex flex-col p-4">
-          <p tw="text-lg">{title}</p>
-          <p tw="text-gray-600">
-            By {author} on {publishedAt}
-          </p>
-          <p tw="text-gray-800">{description}</p>
-          <a href={url}>
-            <button tw="self-end bg-color-blue-500 p-2 rounded mt-4">
-              Read More
-            </button>
-          </a>
-        </div>
-      </div>
-    </div>
-  )
-}
 
 const Index = props => {
   const ArticlesWithAuthors = props.articles.filter(
