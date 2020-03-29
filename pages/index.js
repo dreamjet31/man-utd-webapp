@@ -17,6 +17,9 @@ const Index = () => {
         tw`mx-auto`,
         css`
           scroll-behavior: smooth;
+          * {
+            scroll-behavior: smooth;
+          }
         `
       ]}
     >
