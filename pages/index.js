@@ -66,36 +66,30 @@ const Index = props => {
 
           {/* TROPHIES */}
           <MainPage id="trophies" colour1="#2a4365" colour2="#742a2a">
-            <div tw="flex flex-wrap m-2 overflow-auto h-full">
+            <div tw="flex flex-1 h-full m-auto p-2 overflow-auto">
               <TrophiesCard
-                trophyImage="premier_league"
-                trophyCount="20"
-                trophyName="Premier League"
+                trophyImage1="premier_league"
+                trophyCount1="20"
+                trophyName1="Premier League"
+                trophyImage2="fa_cup"
+                trophyCount2="12"
+                trophyName2="FA Cup"
               />
               <TrophiesCard
-                trophyImage="fa_cup"
-                trophyCount="12"
-                trophyName="FA Cup"
+                trophyImage1="uefa_champions_league"
+                trophyCount1="3"
+                trophyName1="Champion's League"
+                trophyImage2="uefa_europa_league"
+                trophyCount2="1"
+                trophyName2="Europa League"
               />
               <TrophiesCard
-                trophyImage="uefa_champions_league"
-                trophyCount="3"
-                trophyName="Champion's League"
-              />
-              <TrophiesCard
-                trophyImage="uefa_europa_league"
-                trophyCount="1"
-                trophyName="Europa League"
-              />
-              <TrophiesCard
-                trophyImage="fifa_club_world_cup"
-                trophyCount="1"
-                trophyName="FIFA Club World Cup"
-              />
-              <TrophiesCard
-                trophyImage="community_shield"
-                trophyCount="21"
-                trophyName="Community Shield"
+                trophyImage1="fifa_club_world_cup"
+                trophyCount1="1"
+                trophyName1="FIFA Club World Cup"
+                trophyImage2="community_shield"
+                trophyCount2="21"
+                trophyName2="Community Shield"
               />
             </div>
           </MainPage>
