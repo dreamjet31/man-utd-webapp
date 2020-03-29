@@ -4,8 +4,11 @@ const NewsCard = props => {
   const { urlToImage, author, title, description, url, publishedAt } = props
 
   return (
-    <div tw="w-full md:w-1/2 lg:w-1/3 px-2 my-2">
-      <div tw="shadow-md rounded bg-white">
+    <div
+      key={`${publishedAt}-${title}`}
+      tw="w-full md:w-1/2 lg:w-1/3 px-2 my-2"
+    >
+      <div tw="shadow-md rounded bg-gray-100">
         <img
           tw="h-48 w-full rounded object-cover"
           src={urlToImage}

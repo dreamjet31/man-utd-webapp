@@ -8,7 +8,7 @@ const PlayersCard = props => {
 
   return (
     <div tw="flex flex-col flex-shrink-0 h-full mx-2">
-      <div tw="bg-white p-1 rounded m-auto h-48 w-full sm:h-56 md:h-64 lg:h-72">
+      <div tw="bg-gray-100 p-1 rounded m-auto h-48 w-full sm:h-56 md:h-64 lg:h-72">
         <div>
           <img
             tw="h-40 sm:h-48 md:h-56 lg:h-64 mx-auto rounded object-cover"
