@@ -22,14 +22,16 @@ const Index = () => {
         <Navbar> Sidebar </Navbar>
         <div tw="overflow-auto h-screen w-full">
           <MainPage colour1="#742a2a" colour2="#1a202c">
-            <div tw="p-2 text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-center text-gray-100 font-bold">
-              MANCHESTER UNITED
-            </div>
-            <div tw="mx-auto mt-20 sm:mt-24 md:mt-32 lg:mt-48">
-              <img
-                tw="object-contain w-full h-48 sm:h-56 md:h-64"
-                src={require("../public/images/red_devils_image.png")}
-              />
+            <div tw="flex flex-col overflow-auto justify-around items-center content-around">
+              <div tw="p-2 text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-center text-gray-100 font-bold">
+                MANCHESTER UNITED
+              </div>
+              <div tw="mx-auto mt-10 mx-10 p-4 shadow-lg rounded sm:mt-20 md:mt-24 lg:mt-32">
+                <img
+                  tw="object-contain w-full h-48 sm:h-56 md:h-64"
+                  src={require("../public/images/red_devils_image.png")}
+                />
+              </div>
             </div>
           </MainPage>
 

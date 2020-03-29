@@ -2,7 +2,7 @@ import tw from "twin.macro"
 
 const Navbar = () => {
   return (
-    <div tw="flex flex-row my-auto sm:my-0 sm:flex-col sm:w-1/6 bg-gray-900">
+    <div tw="flex flex-row my-auto sm:my-0 sm:flex-col sm:w-1/6 bg-gray-900 rounded ">
       <div tw="self-center">
         <div tw="w-16 h-16 m-2 sm:p-2 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-32 lg:h-32">
           <img src={require("../public/images/mufc_logo.jpg")} />
