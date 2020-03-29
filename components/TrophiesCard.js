@@ -20,9 +20,12 @@ const TrophiesCard = props => {
             src={require(`../public/images/trophies/${trophyImage1}.jpg`)}
           />
         </div>
-        <div tw="text-center rounded border-gray-100 border-2 font-semibold bg-gray-900 text-gray-100">
+        <div tw="text-center rounded border-gray-100 border-2">
           <p>
-            {trophyCount1} {trophyName1}
+            <span tw="text-lg px-1 font-bold">{trophyCount1}</span>
+            <span tw="font-semibold text-lg px-1 rounded bg-gray-900 text-gray-100">
+              {trophyName1}
+            </span>
           </p>
         </div>
       </div>
@@ -33,9 +36,12 @@ const TrophiesCard = props => {
             src={require(`../public/images/trophies/${trophyImage2}.jpg`)}
           />
         </div>
-        <div tw="text-center rounded border-gray-100 border-2 font-semibold bg-gray-900 text-gray-100">
+        <div tw="text-center rounded border-gray-100 border-2">
           <p>
-            {trophyCount2} {trophyName2}
+            <span tw="text-lg px-1 font-bold">{trophyCount2}</span>
+            <span tw="font-semibold text-lg px-1 rounded bg-gray-900 text-gray-100">
+              {trophyName2}
+            </span>
           </p>
         </div>
       </div>
