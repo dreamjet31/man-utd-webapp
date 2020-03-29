@@ -66,7 +66,7 @@ const Index = props => {
 
           {/* TROPHIES */}
           <MainPage id="trophies" colour1="#2a4365" colour2="#742a2a">
-            <div tw="flex flex-1 flex-col h-screen m-2 p-1 overflow-auto sm:flex-row sm:flex-wrap sm:overflow-auto sm:justify-around sm:items-center">
+            <div tw="flex flex-wrap m-2 overflow-auto h-full">
               <TrophiesCard
                 trophyImage="premier_league"
                 trophyCount="20"
