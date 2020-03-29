@@ -14,12 +14,14 @@ import TrophiesCard from "../components/TrophiesCard"
 const NewsCard = props => {
   const { urlToImage, author, title, description, url, publishedAt } = props
 
-  console.log(props.articles)
-
   return (
     <div tw="w-full md:w-1/2 lg:w-1/3 px-2 my-2">
       <div tw="shadow-md rounded bg-white">
-        <img tw="h-48 w-full rounded object-cover" src={urlToImage} alt="" />
+        <img
+          tw="h-48 w-full rounded object-cover"
+          src={urlToImage}
+          alt={title}
+        />
         <div tw="flex flex-col p-4">
           <p tw="text-lg">{title}</p>
           <p tw="text-gray-600">
@@ -127,7 +129,7 @@ const Index = props => {
 
           {/* PLAYERS */}
           <MainPage id="players" colour1="#742a2a" colour2="#1a202c">
-            <div tw="flex flex-1 m-2 p-1 flex-row min-h-full overflow-auto">
+            <div tw="flex flex-1 h-full m-auto p-2 overflow-auto">
               <PlayersCard
                 player1Img="de_gea"
                 player2Img="fernandes"
@@ -199,19 +201,3 @@ Index.getInitialProps = async function() {
 }
 
 export default Index
-
-{
-  /* <div tw="flex flex-row flex-1 h-screen overflow-auto m-2 p-1">
-<div tw="flex flex-col bg-gray-200 h-40 w-1/2">
-  <div>
-    <img
-      tw="bg-yellow-500 m-1 h-40 object-contain"
-      src="https://ichef.bbci.co.uk/live-experience/cps/624/cpsprodpb/FA23/production/_111453046_p087xd30.jpg"
-    />
-  </div>
-  <div>
-    <p tw="bg-green-500 m-1">This is the news.</p>
-  </div>
-</div>
-</div> */
-}
