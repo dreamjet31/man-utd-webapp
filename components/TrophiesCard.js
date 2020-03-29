@@ -16,8 +16,11 @@ const TrophiesCard = props => {
           />
         </div>
         <div tw="text-center p-1">
-          <p tw="text-lg">
-            {trophyName} - <span tw="font-bold text-lg">{trophyCount}</span>
+          <p>
+            <span tw="font-bold text-xl px-1">{trophyCount}</span>
+            <span tw="text-base p-1 rounded font-semibold text-center bg-gray-900 text-gray-100">
+              {trophyName}
+            </span>
           </p>
         </div>
       </div>

@@ -15,7 +15,7 @@ const PlayersCard = props => {
             src={require(`../public/images/players/${player1Img}.png`)}
           />
         </div>
-        <div tw="text-center">
+        <div tw="text-center rounded border-gray-100 border-2 font-semibold bg-gray-900 text-gray-100">
           <p>{player1Name}</p>
         </div>
       </div>
@@ -26,7 +26,7 @@ const PlayersCard = props => {
             src={require(`../public/images/players/${player2Img}.png`)}
           />
         </div>
-        <div tw="text-center">
+        <div tw="text-center rounded border-gray-100 border-2 font-semibold bg-gray-900 text-gray-100">
           <p>{player2Name}</p>
         </div>
       </div>
