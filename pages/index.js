@@ -34,8 +34,8 @@ const Index = props => {
       </Head>
 
       {/* HOME */}
-      <div tw="flex flex-1 flex-col sm:flex-row-reverse h-screen">
-        {/* <Navbar /> */}
+      <div tw="flex flex-1 flex-col sm:flex-row h-screen">
+        <Navbar />
         <div tw="overflow-auto h-screen w-full">
           <MainPage colour1="#742a2a" colour2="#1a202c">
             <div tw="flex flex-col overflow-auto justify-around items-center content-around">
@@ -152,7 +152,6 @@ const Index = props => {
             </div>
           </MainPage>
         </div>
-        <Navbar />
       </div>
     </div>
   )
