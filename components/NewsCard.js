@@ -5,7 +5,7 @@ const NewsCard = props => {
 
   return (
     <div
-      key={`${publishedAt}-${title}`}
+      key={`${publishedAt}-${title}-${author}`}
       tw="w-full md:w-1/2 lg:w-1/3 px-2 my-2"
     >
       <div tw="shadow-md rounded bg-gray-100">

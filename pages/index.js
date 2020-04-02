@@ -45,7 +45,7 @@ const Index = props => {
               >
                 MANCHESTER UNITED
               </div>
-              <div tw="mx-auto mt-10 mx-10 p-4 shadow-lg rounded sm:mt-20 md:mt-24 lg:mt-32">
+              <div tw="mx-auto mt-10 mx-10 p-10 shadow-lg rounded sm:mt-20 md:mt-24 lg:mt-32">
                 <img
                   tw="object-contain w-full h-48 sm:h-56 md:h-64"
                   src={require("../public/images/red_devils_image.png")}
