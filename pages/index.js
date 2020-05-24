@@ -13,9 +13,11 @@ import PlayersCard from "../components/PlayersCard"
 import TrophiesCard from "../components/TrophiesCard"
 
 const Index = props => {
-  const ArticlesWithAuthors = props.articles.filter(
-    article => article.author != null
-  )
+  const ArticlesWithAuthors = props.articles
+
+  // .filter(
+  //   article => article.author != null
+  // )
 
   return (
     <div
