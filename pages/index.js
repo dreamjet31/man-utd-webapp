@@ -26,7 +26,7 @@ const Index = props => {
           * {
             scroll-behavior: smooth;
           }
-        `
+        `,
       ]}
     >
       <Head>
@@ -135,6 +135,7 @@ const Index = props => {
             <div tw="flex flex-wrap mt-2 mx-2 overflow-auto">
               {ArticlesWithAuthors.map(article => (
                 <NewsCard
+                  key={article.urlToImage}
                   urlToImage={article.urlToImage}
                   author={article.author}
                   title={article.title}
@@ -151,13 +152,13 @@ const Index = props => {
   )
 }
 
-Index.getInitialProps = async function() {
+Index.getInitialProps = async function () {
   const res = await fetch(
     "http://newsapi.org/v2/everything?" +
       "q=Manchester United&" +
-      "from=2020-03-29&" +
+      // "from=2020-03-29&" +
       "sortBy=popularity&" +
-      "apiKey=d690a03ad7524a55a42c9c404e2afb46"
+      `apiKey=${process.env.API_KEY}`
   )
   const data = await res.json()
 
