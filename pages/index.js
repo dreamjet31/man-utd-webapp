@@ -154,7 +154,8 @@ const Index = props => {
   )
 }
 
-Index.getInitialProps = async function () {
+export async function getStaticProps() {
+  // Get external data from the file system, API, DB, etc.
   const res = await fetch(
     "http://newsapi.org/v2/everything?" +
       "q=Manchester United&" +
@@ -163,8 +164,24 @@ Index.getInitialProps = async function () {
       `apiKey=${process.env.API_KEY}`
   )
   const data = await res.json()
-
-  return data
+  // The value of the `props` key will be
+  //  passed to the `Home` component
+  return {
+    props: data,
+  }
 }
+
+// Index.getInitialProps = async function () {
+//   const res = await fetch(
+//     "http://newsapi.org/v2/everything?" +
+//       "q=Manchester United&" +
+//       // "from=2020-03-29&" +
+//       "sortBy=popularity&" +
+//       `apiKey=${process.env.API_KEY}`
+//   )
+//   const data = await res.json()
+
+//   return data
+// }
 
 export default Index
