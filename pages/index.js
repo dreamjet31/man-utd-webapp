@@ -162,9 +162,6 @@ Index.getInitialProps = async function () {
   )
   const data = await res.json()
 
-  console.log(`Show data fetched. Count: ${data.length}`)
-  console.log(res)
-
   return data
 }
 
