@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
   faTwitterSquare,
   faGithubSquare,
-  faLinkedin
+  faLinkedin,
 } from "@fortawesome/free-brands-svg-icons"
 
 const Navbar = () => {
@@ -36,11 +36,11 @@ const Navbar = () => {
           <FontAwesomeIcon tw="mx-1 text-gray-100" icon={faTwitterSquare} />
         </a>
 
-        <a href="https://www.linkedin.com/in/akshajverma7/" target="_blank">
+        <a href="https://www.linkedin.com/in/akshajverma7" target="_blank">
           <FontAwesomeIcon tw="mx-1 text-gray-100" icon={faLinkedin} />
         </a>
 
-        <a href="https://github.com/theairbend3r/" target="_blank">
+        <a href="https://github.com/theairbend3r" target="_blank">
           <FontAwesomeIcon tw="mx-1 text-gray-100" icon={faGithubSquare} />
         </a>
       </div>
