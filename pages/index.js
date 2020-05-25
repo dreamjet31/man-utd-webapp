@@ -13,7 +13,23 @@ import PlayersCard from "../components/PlayersCard"
 import TrophiesCard from "../components/TrophiesCard"
 
 const Index = props => {
-  const ArticlesWithAuthors = props.articles
+  // const allArticles = props.articles
+
+  // if (allArticles) {
+  //   const newsArticles = allArticles.map(article => (
+  //     <NewsCard
+  //       key={article.urlToImage}
+  //       urlToImage={article.urlToImage}
+  //       author={article.author}
+  //       title={article.title}
+  //       description={article.description}
+  //       url={article.url}
+  //       publishedAt={article.publishedAt}
+  //     ></NewsCard>
+  //   ))
+  // } else {
+  //   const newsArticles = "No new articles."
+  // }
 
   // .filter(
   //   article => article.author != null
@@ -133,21 +149,9 @@ const Index = props => {
           </MainPage>
 
           {/* NEWS */}
-          <MainPage id="news" colour1="#1a202c" colour2="#2a4365">
-            <div tw="flex flex-wrap mt-2 mx-2 overflow-auto">
-              {ArticlesWithAuthors.map(article => (
-                <NewsCard
-                  key={article.urlToImage}
-                  urlToImage={article.urlToImage}
-                  author={article.author}
-                  title={article.title}
-                  description={article.description}
-                  url={article.url}
-                  publishedAt={article.publishedAt}
-                ></NewsCard>
-              ))}
-            </div>
-          </MainPage>
+          {/* <MainPage id="news" colour1="#1a202c" colour2="#2a4365">
+            <div tw="flex flex-wrap mt-2 mx-2 overflow-auto">{allArticles}</div>
+          </MainPage> */}
         </div>
       </div>
     </div>
