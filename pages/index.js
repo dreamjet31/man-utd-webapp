@@ -13,23 +13,9 @@ import PlayersCard from "../components/PlayersCard"
 import TrophiesCard from "../components/TrophiesCard"
 
 const Index = props => {
-  // const allArticles = props.articles
+  const articlesWithAuthors = props.articles
 
-  // if (allArticles) {
-  //   const newsArticles = allArticles.map(article => (
-  //     <NewsCard
-  //       key={article.urlToImage}
-  //       urlToImage={article.urlToImage}
-  //       author={article.author}
-  //       title={article.title}
-  //       description={article.description}
-  //       url={article.url}
-  //       publishedAt={article.publishedAt}
-  //     ></NewsCard>
-  //   ))
-  // } else {
-  //   const newsArticles = "No new articles."
-  // }
+  console.log(articlesWithAuthors)
 
   // .filter(
   //   article => article.author != null
@@ -149,31 +135,45 @@ const Index = props => {
           </MainPage>
 
           {/* NEWS */}
-          {/* <MainPage id="news" colour1="#1a202c" colour2="#2a4365">
-            <div tw="flex flex-wrap mt-2 mx-2 overflow-auto">{allArticles}</div>
-          </MainPage> */}
+          <MainPage id="news" colour1="#1a202c" colour2="#2a4365">
+            <div tw="flex flex-wrap mt-2 mx-2 overflow-auto">
+              {articlesWithAuthors.length !== 0
+                ? articlesWithAuthors.map(article => (
+                    <NewsCard
+                      key={article.urlToImage}
+                      urlToImage={article.urlToImage}
+                      author={article.author}
+                      title={article.title}
+                      description={article.description}
+                      url={article.url}
+                      publishedAt={article.publishedAt}
+                    />
+                  ))
+                : "No new artices."}
+            </div>
+          </MainPage>
         </div>
       </div>
     </div>
   )
 }
 
-// export async function getStaticProps() {
-//   // Get external data from the file system, API, DB, etc.
-//   const res = await fetch(
-//     "http://newsapi.org/v2/everything?" +
-//       "q=Manchester United&" +
-//       // "from=2020-03-29&" +
-//       "sortBy=popularity&" +
-//       `apiKey=${process.env.API_KEY}`
-//   )
-//   const data = await res.json()
-//   // The value of the `props` key will be
-//   //  passed to the `Home` component
-//   return {
-//     props: data,
-//   }
-// }
+export async function getStaticProps() {
+  // Get external data from the file system, API, DB, etc.
+  const res = await fetch(
+    "http://newsapi.org/v2/everything?" +
+      "q=Manchester United&" +
+      // "from=2020-03-29&" +
+      "sortBy=popularity&" +
+      `apiKey=${process.env.API_KEY}`
+  )
+  const data = await res.json()
+  // The value of the `props` key will be
+  //  passed to the `Home` component
+  return {
+    props: data,
+  }
+}
 
 // Index.getInitialProps = async function () {
 //   const res = await fetch(
